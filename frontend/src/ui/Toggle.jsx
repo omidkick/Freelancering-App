@@ -1,6 +1,6 @@
 import { Switch } from "@headlessui/react";
 
-function Toggle({ label, enabled, onChange }) {
+function Toggle({  enabled, onChange }) {
   return (
     <Switch.Group>
       <div className="flex items-center gap-x-2">

@@ -39,9 +39,16 @@ function ProjectHeader() {
         {/* Desktop filter */}
         <div className="hidden md:flex items-center justify-between font-bold gap-x-8">
           <Filter filterField="status" options={statusOptions} />
-          <FilterDropDown filterField="sort" options={sortOptions} />
+          <FilterDropDown
+            filterField="sort"
+            options={sortOptions}
+            id="sort-projects"
+            name="sort-projects"
+          />
           <FilterDropDown
             filterField="category"
+            id="category-projects"
+            name="category-projects"
             options={[
               { value: "ALL", label: "دسته بندی (همه)" },
               ...transformedCategories,
@@ -80,6 +87,8 @@ function ProjectHeader() {
             <Filter filterField="status" options={statusOptions} />
             <FilterDropDown
               filterField="category"
+              id="mobile-category-projects"
+              name="mobile-category-projects"
               options={[
                 { value: "ALL", label: "دسته بندی (همه)" },
                 ...transformedCategories,
@@ -107,7 +116,12 @@ function ProjectHeader() {
       >
         <div className="flex flex-col space-y-16">
           <div>
-            <FilterDropDown filterField="sort" options={sortOptions} />
+            <FilterDropDown
+              filterField="sort"
+              options={sortOptions}
+              id="mobile-sort-projects"
+              name="mobile-sort-projects"
+            />
           </div>
           <div className=" flex-1 font-semibold">
             <button
